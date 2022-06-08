@@ -5,5 +5,9 @@ public class Currency_Exchange {
         HashMap<Integer, String> Rahaa = new HashMap<>();
 
         Rahaa.put(1, "EUR");
+        Rahaa.put(2, "USD");
+        Rahaa.put(3, "CNY");
+        Rahaa.put(4, "JPY");
+        Rahaa.put(5, "TWD");
     }
 }
