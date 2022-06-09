@@ -43,5 +43,8 @@ public class Currency_Exchange {
         HttpURLConnection request = (HttpURLConnection) url.openConnection();
         request.setRequestMethod("GET");
         
+        if(request.getResponseCode() == HttpURLConnection.HTTP_OK){
+            
+        }
     }
 }
