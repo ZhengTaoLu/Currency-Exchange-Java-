@@ -14,5 +14,9 @@ public class Currency_Exchange {
 
         String fromCode, toCode;
         double määrä;
+
+        System.out.println("Currency converting from?" + "\n");
+        System.out.println("1:EUR \t 2:USD \t 3:CNY \t " +
+                            "4:JPY \t 5:TWD" + "\n");
     }
 }
