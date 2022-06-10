@@ -38,9 +38,28 @@ public class Currency_Exchange {
     private static void Valuutta(String mistä, String minne, Double määrä) throws IOException{
         
         String url_str = "https://api.exchangerate.host/convert?from=" + mistä +"&to=" + minne;
-
+        /** 
+         * ! instantiate the URL object with the target URL of the resource to request.
+        */
         URL url = new URL(url_str);
+        /** 
+         * ! instantiate the HttpURLConnection with the URL object 
+         * ! - A new connection is opened every time by calling the openConnection method of the protocol handler for this URL. 
+         * 
+         * ! 1. This is the point where the connection is opened.
+         */                                             
         HttpURLConnection request = (HttpURLConnection) url.openConnection();
+        /**
+         * ! URL class:
+         * The URL class is the gateway to any of the resources available on the internet. 
+         * A Class URL represents a Uniform Resource Locator, which is a pointer to a “resource” on the World Wide Web. 
+         * A resource can point to a simple file or directory, or it can refer to a more complicated object, such as a query to a database or to a search engine.
+         */
+        /**
+         * ! HttpURLConnection class:
+         * An abstract class directly extending from URLConnection class. 
+         * It includes all the functionality of its parent class with additional HTTP-specific features.
+         */
         request.setRequestMethod("GET");
         
         if(request.getResponseCode() == HttpURLConnection.HTTP_OK){
