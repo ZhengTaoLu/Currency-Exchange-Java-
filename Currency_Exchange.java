@@ -39,12 +39,13 @@ public class Currency_Exchange {
 
 
     }
+    
     private static void Valuutta(String mistä, String minne, Double määrä) throws IOException{
         
         String url_str = "https://api.exchangerate.host/convert?from=" + mistä +"&to=" + minne;
         
         /** 
-         * ! instantiate the URL object with the target URL of the resource to request.
+        * ! instantiate the URL object with the target URL of the resource to request.
         */
         URL url = new URL(url_str);
         
@@ -52,12 +53,12 @@ public class Currency_Exchange {
          * ! instantiate the HttpURLConnection with the URL object 
          * ! - A new connection is opened every time by calling the openConnection method of the protocol handler for this URL. 
          * 
-         * ! 1. This is the point where the connection is opened.
+         * * 1. This is the point where the connection is opened.
          */                                             
         
         /**
          * ! Why (HttpURLConnection) url.openConnection() insteasd of new HttpURLConnection()?
-         * https://stackoverflow.com/questions/10119067/java-httpurlconnection-class-program
+         * * https://stackoverflow.com/questions/10119067/java-httpurlconnection-class-program
          */
          HttpURLConnection request =  (HttpURLConnection) url.openConnection();
         
@@ -73,9 +74,28 @@ public class Currency_Exchange {
          * It includes all the functionality of its parent class with additional HTTP-specific features.
          */
         
-         request.setRequestMethod("GET");
+        /** 
+         * ! setRequestMethod():
+         * Sets the method for the URL request, 
+         * one of: "GET","POST","HEAD","OPTIONS","PUT","DELETE","TRACE" are legal, 
+         * subject to protocol restrictions.
+         */
+         request.setRequestMethod("GET");     
         
-        if(request.getResponseCode() == HttpURLConnection.HTTP_OK){
+        /**
+         * ! getResponseCode():
+         *   Gets the status code from an HTTP response message. 
+         * * For example, in the case of the following status lines:
+         * ! HTTP/1.0 "200=OK" 
+         * ! HTTP/1.0 "401=Unauthorized"  
+         * * It will return 200 and 401 respectively. Returns -1 if no code can be discerned from the response
+         */
+        
+         if(request.getResponseCode() == HttpURLConnection.HTTP_OK){
+            /** 
+             * ! BufferedReader:
+             * 
+            */
             BufferedReader fel = new BufferedReader(new InputStreamReader(request.getInputStream()));
         }
     }
