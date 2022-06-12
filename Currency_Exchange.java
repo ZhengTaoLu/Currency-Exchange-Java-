@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import netscape.javascript.JSObject;
+
 public class Currency_Exchange {
     public static void main(String[] args) throws Exception {
         HashMap<Integer, String> Rahaa = new HashMap<>();
@@ -113,6 +115,7 @@ public class Currency_Exchange {
                 response.append(inputStream.readLine());
             }
             inputStream.close();
+            
         }
     }
 }
