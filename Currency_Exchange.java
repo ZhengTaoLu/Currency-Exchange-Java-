@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -45,9 +46,9 @@ public class Currency_Exchange {
     }
     
     private static void Valuutta(String mistä, String minne, Double määrä) throws IOException{
-        
         String url_str = "https://api.exchangerate.host/convert?from=" + mistä +"&to=" + minne;
-        
+        DecimalFormat df = new DecimalFormat("00.00");
+
         /** 
         * ! instantiate the URL object with the target URL of the resource to request.
         */
@@ -126,7 +127,7 @@ public class Currency_Exchange {
             System.out.println(json.getJSONObject("info"));
             System.out.println(ExchangeRate);
             System.out.println();
-            System.out.println(määrä + mistä + " = " + määrä/ExchangeRate + minne);
+            System.out.println(df.format(määrä) +" "+ mistä + " = " + df.format(määrä/ExchangeRate) +" "+minne);
         }
         else {
             System.out.println("GET request failed");
