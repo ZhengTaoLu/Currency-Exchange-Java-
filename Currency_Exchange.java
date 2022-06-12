@@ -107,11 +107,12 @@ public class Currency_Exchange {
              * 
              */
             BufferedReader inputStream = new BufferedReader(new InputStreamReader(request.getInputStream()));
-            StringBuffer response = new StringBuffer();
+            StringBuffer response = new StringBuffer();     // Kind of similar to StringBuilder
 
             while(inputStream.readLine() != null){ // keep reading 
-                
+                response.append(inputStream.readLine());
             }
+            inputStream.close();
         }
     }
 }
