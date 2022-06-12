@@ -60,7 +60,7 @@ public class Currency_Exchange {
          * ! Why (HttpURLConnection) url.openConnection() insteasd of new HttpURLConnection()?
          * * https://stackoverflow.com/questions/10119067/java-httpurlconnection-class-program
          */
-         HttpURLConnection request =  (HttpURLConnection) url.openConnection();
+        HttpURLConnection request =  (HttpURLConnection) url.openConnection();
         
         /**
          * ! URL class:
@@ -80,7 +80,7 @@ public class Currency_Exchange {
          * one of: "GET","POST","HEAD","OPTIONS","PUT","DELETE","TRACE" are legal, 
          * subject to protocol restrictions.
          */
-         request.setRequestMethod("GET");     
+        request.setRequestMethod("GET");     
         
         /**
          * ! getResponseCode():
@@ -91,12 +91,27 @@ public class Currency_Exchange {
          * * It will return 200 and 401 respectively. Returns -1 if no code can be discerned from the response
          */
         
-         if(request.getResponseCode() == HttpURLConnection.HTTP_OK){
+        if(request.getResponseCode() == HttpURLConnection.HTTP_OK){
             /** 
              * ! BufferedReader:
+             * * It abstracts the low level byte-by-byte reading of files and gives you a much simpler and more convenient interface to reading files.
+             * https://www.reddit.com/r/learnprogramming/comments/372kxy/eli5_bufferedreader_vs_scanner_java/
+             * ! BufferedReader vs FileReader
+             *  https://stackoverflow.com/questions/9648811/specific-difference-between-bufferedreader-and-filereader
              * 
+             * * BufferedReader name = new BufferedReader(new "insert inputstreamreader or It's subclass reader")("inputstream");
             */
-            BufferedReader fel = new BufferedReader(new InputStreamReader(request.getInputStream()));
+
+            /**
+             * ! InputStreamReader():
+             * 
+             */
+            BufferedReader inputStream = new BufferedReader(new InputStreamReader(request.getInputStream()));
+            StringBuffer response = new StringBuffer();
+
+            while(inputStream.readLine() != null){ // keep reading 
+                
+            }
         }
     }
 }
