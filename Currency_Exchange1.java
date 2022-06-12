@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import org.json.JSONObject;
 
-public class Currency_Exchange {
+public class Currency_Exchange1 {
     public static void main(String[] args) throws Exception {
         HashMap<Integer, String> Rahaa = new HashMap<>();
         try (Scanner lukija = new Scanner(System.in)) {
@@ -42,10 +42,9 @@ public class Currency_Exchange {
             Valuutta(mistä, minne, määrä);
         }
     
+    }
     public static void GUI(){
         
-    }
-
     }
     
     public static void Valuutta(String mistä, String minne, Double määrä) throws IOException{
