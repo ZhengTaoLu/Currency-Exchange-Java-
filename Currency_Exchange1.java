@@ -41,11 +41,14 @@ public class Currency_Exchange {
 
             Valuutta(mistä, minne, määrä);
         }
-
+    
+    public static void GUI(){
+        
+    }
 
     }
     
-    private static void Valuutta(String mistä, String minne, Double määrä) throws IOException{
+    public static void Valuutta(String mistä, String minne, Double määrä) throws IOException{
         String url_str = "https://api.exchangerate.host/convert?from=" + mistä +"&to=" + minne;
         DecimalFormat df = new DecimalFormat("00.00");
 
@@ -133,4 +136,5 @@ public class Currency_Exchange {
             System.out.println("GET request failed");
         }
     }
+
 }
