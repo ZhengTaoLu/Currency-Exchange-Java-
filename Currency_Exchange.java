@@ -6,7 +6,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import netscape.javascript.JSObject;
+import org.json.JSONObject;
 
 public class Currency_Exchange {
     public static void main(String[] args) throws Exception {
@@ -37,6 +37,8 @@ public class Currency_Exchange {
 
             System.out.println("Amount? \n");
             määrä = Double.valueOf(lukija.nextLine());
+
+            Valuutta(mistä, minne, määrä);
         }
 
 
@@ -109,13 +111,25 @@ public class Currency_Exchange {
              * 
              */
             BufferedReader inputStream = new BufferedReader(new InputStreamReader(request.getInputStream()));
+            String inputline;
             StringBuffer response = new StringBuffer();     // Kind of similar to StringBuilder
 
-            while(inputStream.readLine() != null){ // keep reading 
-                response.append(inputStream.readLine());
-            }
-            inputStream.close();
+            while((inputline = inputStream.readLine()) != null){ //! keep reading (Always remember String = readline)
+                response.append(inputline);
+            }inputStream.close();
             
+            
+            /* */
+            JSONObject json = new JSONObject(response.toString());
+            Double ExchangeRate = json.getJSONObject("info").getDouble("rate");
+
+            System.out.println(json.getJSONObject("info"));
+            System.out.println(ExchangeRate);
+            System.out.println();
+            System.out.println(määrä + mistä + " = " + määrä/ExchangeRate + minne);
+        }
+        else {
+            System.out.println("GET request failed");
         }
     }
 }
