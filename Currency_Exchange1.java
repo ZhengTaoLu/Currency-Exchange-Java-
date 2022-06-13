@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 public class Currency_Exchange1 {
     public static void main(String[] args) throws Exception {
-        HashMap<Integer, String> Rahaa = new HashMap<>();
+        
         try (Scanner lukija = new Scanner(System.in)) {
             Rahaa.put(1, "EUR");
             Rahaa.put(2, "USD");
@@ -43,7 +43,8 @@ public class Currency_Exchange1 {
         }
     
     }
-    public static void GUI(){
+    public static HashMap<Integer, String> Rahaa = new HashMap<>();
+    public void GUI(){
         
     }
     
@@ -115,6 +116,10 @@ public class Currency_Exchange1 {
              */
             BufferedReader inputStream = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String inputline;
+            /**
+             * ! StringBuffer
+             * 
+             */
             StringBuffer response = new StringBuffer();     // Kind of similar to StringBuilder
 
             while((inputline = inputStream.readLine()) != null){ //! keep reading (Always remember String = readline)
