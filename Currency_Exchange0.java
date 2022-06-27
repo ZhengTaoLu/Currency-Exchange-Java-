@@ -4,8 +4,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.util.Currency;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.json.JSONObject;
 
@@ -13,6 +15,7 @@ public class Currency_Exchange0 {
     public static void main(String[] args) throws Exception {
         HashMap<Integer, String> Rahaa = new HashMap<>();
         try (Scanner lukija = new Scanner(System.in)) {
+            /* 
             Rahaa.put(1, "EUR");
             Rahaa.put(2, "USD");
             Rahaa.put(3, "CNY");
@@ -40,6 +43,18 @@ public class Currency_Exchange0 {
             määrä = Double.valueOf(lukija.nextLine());
 
             Valuutta(mistä, minne, määrä);
+            */
+            /* 
+            String[] sets = new String[Currency.getAvailableCurrencies().size()];
+            int a = 0;
+            for (Object b : Currency.getAvailableCurrencies().toArray()){
+                sets[a++] = b.toString();
+            }
+            for (int i = 0; i < Currency.getAvailableCurrencies().size(); i++){
+                Rahaa.put(i, sets[i]);
+            }
+            System.out.println(Rahaa);
+            */
         }
 
 
