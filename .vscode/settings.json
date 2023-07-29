@@ -1,0 +1,18 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\json-20220320.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\json-simple-1.1.1.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\gson-2.8.2.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.base.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.controls.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.fxml.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.graphics.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.media.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.swing.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx.web.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-19\\lib\\javafx-swt.jar"
+    ],
+    "maven.view": "flat",
+    "C_Cpp.errorSquiggles": "Disabled"
+}

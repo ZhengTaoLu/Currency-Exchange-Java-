@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="Window1" fx:id="Currency_Exchange_GUI" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="ConvertButton" layoutX="254.0" layoutY="340.0" mnemonicParsing="false" onAction="#convert" prefHeight="50.0" prefWidth="111.0" text="Convert" />
+      <ComboBox fx:id="ToScroll" layoutX="620.0" layoutY="162.0" prefWidth="150.0" />
+      <ComboBox fx:id="FromScroll" layoutX="104.0" layoutY="162.0" prefWidth="150.0" />
+      <TextField fx:id="TextField" layoutX="318.0" layoutY="134.0" prefHeight="81.0" prefWidth="233.0" style="-fx-border-color: black; -fx-border-width: 4;">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ResetButton" layoutX="387.0" layoutY="340.0" mnemonicParsing="false" onAction="#reset" prefHeight="50.0" prefWidth="111.0" text="Reset" />
+      <Button fx:id="ExitButton" layoutX="530.0" layoutY="340.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="111.0" text="Exit" />
+   </children>
+</Pane>

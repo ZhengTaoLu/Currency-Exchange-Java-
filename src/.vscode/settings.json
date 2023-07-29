@@ -1,0 +1,11 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\json-20220320.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\json-simple-1.1.1.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\gson-2.8.2.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\nv-jdo-1.19.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\nv-i18n-1.29.jar"
+    ],
+    "maven.view": "flat"
+}
