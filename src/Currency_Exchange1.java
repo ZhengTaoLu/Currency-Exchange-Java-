@@ -80,7 +80,9 @@ public class Currency_Exchange1 extends Application{
             Parent root = (Parent)fxmlLoader.load(); 
             Scene scene = new Scene(root);
             
-            
+            primaryStage.setTitle("Test");
+            primaryStage.setScene(scene);
+            primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
