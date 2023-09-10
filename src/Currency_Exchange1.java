@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
@@ -46,13 +47,16 @@ import javafx.stage.Stage;
 
 public class Currency_Exchange1 extends Application{
     public static void main(String[] args) throws Exception {
-        
+        /* 
         try (Scanner lukija = new Scanner(System.in)) {
             Myframe2 yes = new Myframe2();
             Application.launch(Currency_Exchange1.class);
             
         }
-    
+        */
+        URL url = Currency_Exchange1.class.getResource("JavaFX_GUI.fxml");
+        System.out.println(url);
+        //Application.launch(JavaFXGUI.class);
     }
     
     public static HashMap<String, String[]> Rahaa(){
@@ -76,7 +80,7 @@ public class Currency_Exchange1 extends Application{
     }
     public void GUI(Stage primaryStage) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("JavaFX GUI.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("JavaFX_GUI.fxml"));
             Parent root = (Parent)fxmlLoader.load(); 
             Scene scene = new Scene(root);
             

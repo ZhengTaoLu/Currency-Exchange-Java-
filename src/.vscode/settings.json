@@ -5,7 +5,15 @@
         "g:\\My Drive\\Java\\CurrencyExchange\\lib\\json-simple-1.1.1.jar",
         "g:\\My Drive\\Java\\CurrencyExchange\\lib\\gson-2.8.2.jar",
         "g:\\My Drive\\Java\\CurrencyExchange\\lib\\nv-jdo-1.19.jar",
-        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\nv-i18n-1.29.jar"
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\nv-i18n-1.29.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.base.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.controls.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.fxml.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.graphics.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.media.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.swing.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx.web.jar",
+        "g:\\My Drive\\Java\\CurrencyExchange\\lib\\javafx-swt.jar"
     ],
     "maven.view": "flat"
 }
